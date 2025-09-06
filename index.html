@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Task Manager</h1>
+  </header>
+  <div class="container">
+    <form id="taskForm">
+      <input type="text" id="title" placeholder="Task Title" required>
+      <select id="category">
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Study">Study</option>
+      </select>
+      <select id="priority">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <input type="date" id="date" required>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search by title...">
+      <select id="filterStatus">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+        <option value="overdue">Overdue</option>
+      </select>
+      <select id="sort">
+        <option value="date">Sort by Date</option>
+        <option value="priority">Sort by Priority</option>
+        <option value="alpha">Sort A-Z</option>
+      </select>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
