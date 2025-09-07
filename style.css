@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #b9d1d5;
+  color: #333;
+}
+header {
+  background: #68aa95;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+form input, form select, form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+form input, form select {
+  flex: 1;
+}
+form button {
+  background: #5885b8;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.controls input, .controls select {
+  padding: 0.5rem;
+  flex: 1;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  background: white;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.task-info {
+  flex: 1;
+}
+.task-actions button {
+  margin-left: 0.5rem;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.edit-btn { background: #ffc107; }
+.delete-btn { background: #dc3545; color: white; }
+.complete-btn { background: #28a745; color: white; }
+@media (min-width: 768px) {
+  .container { grid-template-columns: 1fr 2fr; }
+  form { grid-column: span 2; }
+  .controls { grid-column: span 2; }
+}
